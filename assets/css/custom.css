@@ -1,0 +1,281 @@
+
+
+/* Styles for the logo on larger screens */
+.navbar-brand img {
+    max-width: 190px; /* Set the maximum width to 100px to reduce its size */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any extra spacing */
+    margin-right: 20px; /* Add some margin to separate the logo from other content */
+}
+
+/* Media query for mobile view (adjust the max-width as needed) */
+@media (max-width: 767px) {
+    .navbar-brand {
+        text-align: center; /* Center the text */
+    }
+
+    .navbar-brand img {
+        max-width: 150px; /* Reduce the logo size */
+        margin: 0 auto; /* Center the logo horizontally */
+    }
+}
+
+/* Style for project cards */
+.service-work.card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    margin-bottom: 50px; /* Adjust the margin as needed to create a separation gap between cards */
+}
+
+.service-work.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    max-height: 300px; /* Adjust the max height as needed */
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 16px;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.text-primary {
+    color: #007bff;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+    .filter-btns {
+        margin-bottom: 20px;
+    }
+
+    .service-work.card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Optional: If you want to remove the underline for all links on the page */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Add a margin below all rows of cards except the last one to maintain a gap */
+.row.projects:not(:last-child) {
+    margin-bottom: 30px; /* Adjust the margin as needed for the middle gap */
+}
+
+/* Add a margin below the last row of cards to maintain a gap at the bottom */
+.row.projects:last-child {
+    margin-bottom: 50px; /* Adjust the margin as needed for the bottom gap */
+}
+
+/* Increase specificity */
+div.filter-btns a.filter-btn.btn {
+    border: 2px solid #ff0000 !important;
+    padding: 5px 10px; /* Adjust the padding as needed */
+    margin: 5px;
+    font-size: 15px;
+    font-weight: normal;
+    color: #000000; /* Set the initial text color */
+    transition: color 0.3s; /* Add a transition for smooth color change */
+}
+
+div.filter-btns a.filter-btn.btn:hover {
+    background-color: #ff0000 !important;
+    color: #ffffff !important;
+    border-color: #ff0000 !important;
+}
+
+div.filter-btns a.filter-btn.btn.active {
+    background-color: #ff0000 !important;
+    color: #fff6f6 !important;
+    border-color: #ff0000 !important;
+}
+
+/* Override the color for the normal state */
+div.filter-btns a.filter-btn.btn {
+    color: #000000 !important;
+}
+
+.text-Icon {
+    color: #a70000;
+}
+
+/* Desktop View */
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10px; /* Adjust the top margin as needed */
+    margin-bottom: 100px; /* Adjust the bottom margin as needed */
+}
+
+.about-card,
+.why-choose-card {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center; /* Center-align the text */
+}
+
+.why-choose-card {
+    width: calc(66.66% - 20px); /* Adjusted width */
+    text-align: center;
+    margin: 0;
+}
+
+.why-choose-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.why-choose-content .about-card {
+    width: calc(31.33% - 20px); /* Adjusted width */
+}
+
+.about-card:hover,
+.about-card:focus,
+.why-choose-card:hover,
+.why-choose-card:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-card h2,
+.why-choose-card h2 {
+    color: #000000; /* Black */
+    margin: 15px;
+    transition: color 0.3s; /* Added transition for color change */
+}
+
+.about-card p,
+.about-card li,
+.why-choose-card p,
+.why-choose-card li {
+    color: #333; /* Dark Gray */
+    line-height: 1.6;
+    margin: 0 15px 15px;
+    transition: color 0.3s; /* Added transition for color change */
+}
+
+.about-card ul,
+.why-choose-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px;
+}
+
+/* Red color hover effect for all texts */
+.about-card:hover h2,
+.about-card:focus h2,
+.why-choose-card:hover h2,
+.why-choose-card:focus h2,
+.about-card:hover p,
+.about-card:focus p,
+.why-choose-card:hover p,
+.why-choose-card:focus p,
+.about-card:hover li,
+.about-card:focus li,
+.why-choose-card:hover li,
+.why-choose-card:focus li {
+    color: #b51212; /* Red */
+}
+
+/* Add a subtle click effect */
+.about-card:active,
+.why-choose-card:active {
+    transform: scale(0.95);
+}
+/* Mobile View */
+@media only screen and (max-width: 768px) {
+    .about-card,
+    .why-choose-card {
+        width: calc(100% - 20px);
+    }
+
+    .why-choose-content .about-card {
+        width: calc(100% - 20px);
+    }
+}
+
+/* Add smooth scroll behavior to anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+
+section {
+    scroll-margin-top: 100px;
+}
+
+#about {
+    background: linear-gradient(to right, #ea0a0a, #7f0a0a); /* Example gradient */
+  }
+
+  #about {
+    padding: 80px 0; /* Adjust top and bottom padding values */
+  }
+  
+
+/* Scroll margin to create a gap before the brands section */
+#brands-section {
+    scroll-margin-top: -90px;
+}
+
+#connect-section {
+    scroll-margin-top: -20px;
+}
+
+.bx {
+    font-family: 'boxicons'!important;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    display: inline-block;
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: left;
+}
+.contact-icon {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-info {
+    margin-left: 0; /* No extra margin needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-info li {
+    list-style: none;
+}
+
